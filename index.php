@@ -69,14 +69,14 @@ function find_data_utils($data){
     //profil -> reviewer["profilePhotoUrl"]
     //name -> reviewer["displayName"]
     //commentaire -> comment
-    $_data = [];
-    foreach($data as $value){
-        array_push($_data,['id' => $value["reviewId"],
-                        'profil' => $value["reviewer"]["profilePhotoUrl"],
-                        'name' => $value["reviewer"]["displayName"],
-                        'etoile' => $value["starRating"],
-                        'commentaire' => $value["comment"]]);
-    }
-    file_put_contents(__DIR__."/data/data.json", json_encode($_data));
+    // $_data = [];
+    // foreach($data as $value){
+    //     array_push($_data,['id' => $value["reviewId"],
+    //                     'profil' => $value["reviewer"]["profilePhotoUrl"],
+    //                     'name' => $value["reviewer"]["displayName"],
+    //                     'etoile' => $value["starRating"],
+    //                     'commentaire' => $value["comment"]]);
+    // }
+    file_put_contents(__DIR__."/data/data.json", json_encode($data));
 
 }
