@@ -9,7 +9,7 @@ $client->setAuthConfig(__DIR__.'/client_secret.json'); // Assurez-vous que votre
 $client->addScope('https://www.googleapis.com/auth/business.manage');
 $client->setRedirectUri('http://localhost');
 
-// Vérifier si un jeton d'accès est déjà présent dans le cookie
+// Vérifier si un jeton d'accès est déjà présent dans le cookie ok
 if (isset($_COOKIE["access_token"])) {
     $accessToken = $_COOKIE["access_token"];
     try {
