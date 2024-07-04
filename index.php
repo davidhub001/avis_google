@@ -77,7 +77,6 @@ function find_data_utils($data){
                         'etoile' => $value["starRating"],
                         'commentaire' => $value["comment"]]);
     }
-    echo "<pre>";
-    var_dump($_data);
-    echo "</pre>";
+    file_put_contents(__DIR__."/data/data.json", json_encode($_data));
+
 }
