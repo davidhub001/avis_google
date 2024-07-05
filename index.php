@@ -7,7 +7,7 @@ use Google\Client;
 $client = new Client();
 $client->setAuthConfig(__DIR__.'/client_secret.json'); // Assurez-vous que votre chemin soit correct
 $client->addScope('https://www.googleapis.com/auth/business.manage');
-$client->setRedirectUri('http://localhost');
+$client->setRedirectUri('https://gloriettebs3.bilp.fr');
 
 // Vérifier si un jeton d'accès est déjà présent dans le cookie ok
 if (isset($_COOKIE["access_token"])) {
@@ -77,6 +77,6 @@ function find_data_utils($data){
     //                     'etoile' => $value["starRating"],
     //                     'commentaire' => $value["comment"]]);
     // }
-    file_put_contents(__DIR__."/data/data.json", json_encode($data));
-
+    if(file_put_contents(__DIR__."/data/data.json", json_encode($data))) echo "https://gloriettebs3.bilp.fr/data/data.json";
+    
 }
